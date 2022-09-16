@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: boutheinahamdimslearntailspinspacegamewebdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: boutheinahamdimslearntailspinspacegamewebdocker
+  template:
+    metadata:
+      labels:
+        app: boutheinahamdimslearntailspinspacegamewebdocker 
+    spec:
+      containers:
+        - name: boutheinahamdimslearntailspinspacegamewebdocker 
+          image: myhelmacr10.azurecr.io/boutheinahamdimslearntailspinspacegamewebdocker
+          ports:
+          - containerPort: 80
